@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Single Page Website</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        nav {
+            background: #0f172a;
+            color: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+        }
+
+        nav h2 {
+            color: #60a5fa;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 18px;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
+        }
+
+        section {
+            padding: 70px 8%;
+            text-align: center;
+        }
+
+        #home {
+            background: #eff6ff;
+            min-height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #home h1 {
+            font-size: 40px;
+            color: #0f172a;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 10px 22px;
+            margin-top: 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        #about {
+            background: white;
+        }
+
+        #services {
+            background: #f1f5f9;
+        }
+
+        .service-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .service {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            width: 240px;
+            box-shadow: 0 2px 8px #00000015;
+        }
+
+        #contact {
+            background: #eff6ff;
+        }
+
+        form {
+            max-width: 450px;
+            margin: 20px auto 0;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #cbd5e1;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav a {
+                margin: 0 5px;
+            }
+
+            #home h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2>My First Hosting Website</h2>
+        <div>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section id="home">
+        <h1>Welcome to My Website</h1>
+        <p>Build your online presence with a modern website.</p>
+        <a href="#about" class="btn">Get Started</a>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We create simple, beautiful, and user-friendly websites.</p>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+
+        <div class="service-container">
+            <div class="service">
+                <h3>Web Design</h3>
+                <p>Creative and modern website designs.</p>
+            </div>
+
+            <div class="service">
+                <h3>Development</h3>
+                <p>Fast and responsive web development.</p>
+            </div>
+
+            <div class="service">
+                <h3>Support</h3>
+                <p>Reliable help for your website.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+
+        <form onsubmit="event.preventDefault(); alert('Message submitted!');">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2026 MyWebsite. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
